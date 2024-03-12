@@ -37,5 +37,26 @@
 */
 
 int task03(int v, int t) {
-	return 0;
+	if (t < 0) {
+		return -1;
+	}
+
+	int length = 56;
+
+	if (v < 0) {
+		if (v * t > length) {
+			return -(length - v * t);
+		}
+		else {
+			return length - v * t;
+		}
+	}
+	else {
+		if (v * t > length) {
+			return v * t - length;
+		}
+		else {
+			return -(v * t - length);
+		}
+	}
 }
