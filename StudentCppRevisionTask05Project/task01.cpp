@@ -40,20 +40,18 @@ int task01(int hour1, int minute1, int second1, int hour2, int minute2, int seco
 	}
 	int seconds;
 
-	int all_time_1 = hour1 % 24 * 3600;
-	all_time_1 += minute1 * 60;
-	all_time_1 += second1;
+	second1 += hour1 % 24 * 3600;
+	second1 += minute1 * 60;
 
-	int all_time_2 = hour2 % 24 * 3600;
-	all_time_2 += minute2 * 60;
-	all_time_2 += second2;
+	second2 += hour2 % 24 * 3600;
+	second2 += minute2 * 60;
 
 
-	if (all_time_1 > all_time_2) {
-		seconds = all_time_1 - all_time_2;
+	if (second1 > second2) {
+		seconds = second1 - second2;
 	}
 	else {
-		seconds = all_time_2 - all_time_1;
+		seconds = second2 - second1;
 	}
 
 	return seconds;
